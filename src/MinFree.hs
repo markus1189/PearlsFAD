@@ -51,6 +51,7 @@ minFrom a (n,xs) | n == 0 = a
         b = a + 1 + n `div` 2
         m = length us
 
+-- NOTE: requires xs to NOT have duplicates, therefore call to nub
 minFreeConquer :: [Int] -> Int
 minFreeConquer xs = minFrom 0 (length nxs, nxs)
   where nxs = nub xs
